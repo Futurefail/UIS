@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function hide(id) {
+                var element = document.getElementById(id);
+                element.style.display = "none";
+            }
+
+            function show(id) {
+                var element = document.getElementById(id);
+                element.style.display = "inline-block";
+            }
+        </script>
+    </head>
+    <body>
+        <main>
+            <form class="menu">
+                <input type="text" id="searchInput" size="20" placeholder="Search">
+                <input type="button" id="show_button" value="+" onclick="show('hideShow');">
+            </form>
+
+            <div id="hideShow" class="hidden_con">
+                <form>
+                    <label>Name:</label><input class="inputfields" type="text" id="name" size="20" placeholder="Contact name">
+                    </br>
+                    <label>Tel:</label><input class="inputfields" type="text" id="number" size="20" placeholder="Phone number">
+                    </br>
+                    <label>Email:</label><input class="inputfields" type="email" id="email" size="20" placeholder="Email address">
+                    </br>
+                    <input type="button" id="addButton" value="Add">
+                    <input type="button" id="hide_button" value="--" onclick="hide('hideShow');">
+                </form>
+            </div>
+
+            <div class="container">
+
+            </div>
+
+        </main>
+
+
+
+    </body>
+</html>
