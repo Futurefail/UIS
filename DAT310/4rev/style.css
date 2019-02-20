@@ -1,0 +1,74 @@
+body {
+    background: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+}
+
+main {
+    width: 40%;
+    height: 100%;
+    margin: 100px auto;
+    left:0;
+    right:0;
+    min-width: 800px;
+    max-width: 1200px;
+}
+
+div {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    padding: 5px;
+    width: 100%;
+    border: 3px double black;
+    margin-bottom: 5px;
+}
+
+.hidden_con {
+    display: none;
+}
+
+.menu {
+    margin-bottom: 5px;
+}
+
+.hidden_con input {
+    margin-left: 9em;
+}
+
+.hidden_con label {
+    position: absolute;
+}
+
+#hide_button {
+    position: absolute;
+    margin: 0;
+    right: 3px;
+    top: 3px;
+}
+
+#addButton {
+    position: relative;
+    margin: 0;
+    left: 0px;
+    bottom: 0px;
+}
+
+h3 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+img.remove {
+    position: absolute;
+    margin: 0;
+    right: 3px;
+    top: 3px;
+}
+
+.inputEmail:invalid {
+    border: 2px dashed red;
+}

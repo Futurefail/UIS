@@ -19,11 +19,13 @@
 
             <div id="inputform" class="hidden_con">
                 <form>
-                    <label>Name:</label><input class="inputName" type="text" id="name" size="20" placeholder="Contact name" required>
+                    <label>Name:</label><input class="inputName" type="text" id="name" size="30" placeholder="Contact name" required>
                     </br>
-                    <label>Tel:</label><input class="inputTel" type="number" id="number" size="20" placeholder="Phone number">
+                    <label id="valT" style="color:black;">Tel:</label>
+                    <input class="inputTel" type="tel" id="number" size="30" placeholder="Phone number" onkeyup="validateNumber();">
                     </br>
-                    <label>Email:</label><input class="inputEmail" type="email" id="email" size="20" placeholder="Email address">
+                    <label id="valE" style="color:black;">Email:</label>
+                    <input class="inputEmail" type="email" id="email" size="30" placeholder="Email address" onkeyup="validateEmail();">
                     </br>
                     <input type="button" id="addButton" value="Add" onclick="newContact();">
                     <input type="button" id="hide_button" value="--" onclick="hide('inputform');">
