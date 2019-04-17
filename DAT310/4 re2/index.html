@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Contact</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="4.js"></script>
+
+    </head>
+    <body>
+        <main>
+            <form class="menu">
+                <input type="text" id="searchInput" size="20" placeholder="Search" onkeyup="searchFor();">
+                <input type="button" id="show_button" value="+" onclick="show('inputform');">
+                <input type="button" id="show_settings" value="Settings" onclick="hide_show();">
+                <input type="button" id="settStyle1" class="h_color" value="H-color" onclick="hColor();">
+                <input type="button" id="settStyle2" class="b_color"value="B-color" onclick="bColor();">
+            </form>
+
+            <div id="inputform" class="hidden_con">
+                <form>
+                    <label>Name:</label><input class="inputName" type="text" id="name" size="30" placeholder="Contact name" required>
+                    </br>
+                    <label id="valT" style="color:black;">Tel:</label>
+                    <input class="inputTel" type="tel" id="number" size="30" placeholder="Phone number" onkeyup="validateNumber();">
+                    </br>
+                    <label id="valE" style="color:black;">Email:</label>
+                    <input class="inputEmail" type="email" id="email" size="30" placeholder="Email address" onkeyup="validateEmail();">
+                    </br>
+                    <input type="button" id="addButton" value="Add" onclick="newContact();">
+                    <input type="button" id="hide_button" value="--" onclick="hide('inputform');">
+                </form>
+            </div>
+
+            <div id="container">
+
+            </div>
+
+        </main>
+
+
+
+    </body>
+</html>
