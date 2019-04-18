@@ -59,6 +59,6 @@ function showAlbum(album_id, cover_img) {
         
         };
     };
-    xhr.open("GET", "/albuminfo?album_id=" + album_id);
+    xhr.open("GET", "/albuminfo?album_id=" + album_id, true);
     xhr.send(null);
 };

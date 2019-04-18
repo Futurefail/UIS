@@ -68,7 +68,7 @@ def albums():
     return formatted_albums
 
 
-@app.route("/albuminfo/<string:album_id>")
+@app.route("/albuminfo")
 def albuminfo():
     albums = app.config["albums"].__tracks
     album_id = request.args.get("album_id", None)
