@@ -57,29 +57,24 @@ class Albums():
 # the Albums class is instantiated and stored in a config variable
 # it's not the cleanest thing ever, but makes sure that the we load the text files only once
 app.config["albums"] = Albums("data/albums.txt", "data/tracks.txt")
-ok = app.config["albums"].get_albums()
-print(ok)
-ok2 = json.dumps(ok)
-print("HELOOOOOOOOOOOOOO!")
-print(ok2)
 
-@app.route("/albums", methods = ["POST"])
+
+@app.route("/albums")
 def albums():
     """Returns a list of albums (with album_id, author, and title) in JSON."""
-    albums = app.config["albums"].get_albums
+    albums = app.config["albums"].get_albums()
     # TODO complete (return albums.get_albums() in JSON format)
     formatted_albums = json.dumps(albums)
-    print(formatted_albums)
     return formatted_albums
 
 
-@app.route("/albuminfo")
+@app.route("/albuminfo/<string:album_id>")
 def albuminfo():
     albums = app.config["albums"].__tracks
     album_id = request.args.get("album_id", None)
     if album_id:
         # TODO complete (return albums.get_album(album_id) in JSON format)
-        album_details = json.dumps(albums.get_album(album_id))
+        album_details = json.dumps(albums.get_album(int(album_id))
         return album_details
     return ""
 
